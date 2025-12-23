@@ -1,15 +1,8 @@
-import React from 'react'
+import React from "react";
+import Root from "./routes/Root";
 
-const App = () => {
-  return (
-    <div>
-<h1 className='text-3xl font-bold '>Habit Tracker</h1>
-<p>No habits added yet.</p>
-
-
-
-    </div>
-  )
+function App() {
+  return <Root />;
 }
 
-export default App
+export default App;
