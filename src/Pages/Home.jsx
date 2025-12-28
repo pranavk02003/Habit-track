@@ -18,7 +18,7 @@ function Home() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-4">
+       <div className="p-4 pb-24 max-w-md mx-auto">
         <h2 className="text-xl font-semibold">Your Habits</h2>
         <button
           onClick={() => setIsOpen(true)}

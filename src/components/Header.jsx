@@ -1,29 +1,20 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Header() {
-  const linkClass = ({ isActive }) =>
-    isActive
-      ? "text-blue-600 font-semibold"
-      : "text-gray-600 hover:text-blue-600";
-
+const Header = () => {
   return (
-    <header className="w-full px-4 py-3 border-b flex items-center justify-between">
-      <h1 className="text-xl font-semibold">Habit Tracker</h1>
+    <header className="border-b p-4">
+      <h1 className="text-4xl font-bold text-blue-600">
+  Habit Tracker
+</h1>
 
-      <nav className="hidden md:flex gap-6 text-sm">
-        <NavLink to="/" end className={linkClass}>
-          Home
-        </NavLink>
-        <NavLink to="/stats" className={linkClass}>
-          Stats
-        </NavLink>
-        <NavLink to="/profile" className={linkClass}>
-          Profile
-        </NavLink>
+      <nav className="hidden md:flex gap-6 mt-2">
+        <Link to="/">Home</Link>
+        <Link to="/stats">Stats</Link>
+        <Link to="/profile">Profile</Link>
       </nav>
     </header>
   );
-}
+};
 
 export default Header;
