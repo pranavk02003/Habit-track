@@ -1,30 +1,37 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import ProgressRing from "../components/ProgressRing";
 
 const Stats = () => {
-  return (
-    <div className="min-h-screen bg-gray-50 p-4 pb-24">
-      <h1 className="text-2xl font-bold mb-6">Statistics</h1>
+  const habits = useSelector((state) => state.habits.list);
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {/* Weekly */}
-        <div className="bg-white rounded-xl shadow p-6 text-center">
-          <h2 className="font-semibold mb-4">This Week</h2>
-          <div className="flex justify-center mb-2">
-            <ProgressRing progress={70} />
-          </div>
-          <p className="text-gray-600">Weekly Completion</p>
+  const total = habits.length;
+  const completed = habits.filter((h) => h.completed).length;
+  const percentage = total === 0 ? 0 : Math.round((completed / total) * 100);
+
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 space-y-6">
+      <h1 className="text-2xl font-bold">Your Progress</h1>
+
+      {/* Progress Ring */}
+      <ProgressRing percentage={percentage} />
+
+      {/* Stats Cards */}
+      <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
+        <div className="bg-white shadow rounded-xl p-4 text-center">
+          <p className="text-gray-500 text-sm">Total Habits</p>
+          <p className="text-2xl font-bold">{total}</p>
         </div>
 
-        {/* Monthly */}
-        <div className="bg-white rounded-xl shadow p-6 text-center">
-          <h2 className="font-semibold mb-4">This Month</h2>
-          <div className="flex justify-center mb-2">
-            <ProgressRing progress={45} />
-          </div>
-          <p className="text-gray-600">Monthly Completion</p>
+        <div className="bg-white shadow rounded-xl p-4 text-center">
+          <p className="text-gray-500 text-sm">Completed</p>
+          <p className="text-2xl font-bold">{completed}</p>
         </div>
       </div>
+
+      <p className="text-gray-600 text-sm">
+        Completion Rate: <span className="font-semibold">{percentage}%</span>
+      </p>
     </div>
   );
 };
