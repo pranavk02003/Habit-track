@@ -24,8 +24,11 @@ const habitsSlice = createSlice({
         completed: false,
       });
     },
+    deleteHabit: (state, action) => {
+  state.list = state.list.filter(h => h.id !== action.payload);
+    },
   },
 });
 
-export const { toggleHabit, addHabit } = habitsSlice.actions;
+export const { toggleHabit, addHabit,deleteHabit } = habitsSlice.actions;
 export default habitsSlice.reducer;

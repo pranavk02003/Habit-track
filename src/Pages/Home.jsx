@@ -4,10 +4,13 @@ import { useState } from "react";
 import HabitCard from "../components/HabitCard";
 import AddHabitButton from "../components/AddHabitButton";
 import AddHabitModal from "../components/AddHabitModal";
+import DeleteConfirmModal from "../components/DeleteConfirmModal";
 
 const Home = () => {
   const habits = useSelector((state) => state.habits.list);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [isAddOpen, setIsAddOpen] = useState(false);
+  const [deleteId, setDeleteId] = useState(null);
 
   return (
     <div className="p-4 min-h-screen relative">
@@ -19,15 +22,25 @@ const Home = () => {
 
       <div className="space-y-3">
         {habits.map((habit) => (
-          <HabitCard key={habit.id} habit={habit} />
+          <HabitCard
+            key={habit.id}
+            habit={habit}
+            onDelete={(id) => setDeleteId(id)}
+          />
         ))}
       </div>
 
-      <AddHabitButton onClick={() => setIsModalOpen(true)} />
+      <AddHabitButton onClick={() => setIsAddOpen(true)} />
 
       <AddHabitModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        isOpen={isAddOpen}
+        onClose={() => setIsAddOpen(false)}
+      />
+
+      <DeleteConfirmModal
+        isOpen={deleteId !== null}
+        habitId={deleteId}
+        onClose={() => setDeleteId(null)}
       />
     </div>
   );
