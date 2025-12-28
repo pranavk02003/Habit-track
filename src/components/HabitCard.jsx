@@ -1,22 +1,22 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { toggleHabit } from "../redux/habitsSlice";
 
-const HabitCard = ({ title }) => {
+const HabitCard = ({ habit }) => {
+  const dispatch = useDispatch();
+
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm flex items-center justify-between">
-      
-      <div>
-        <h2 className="text-lg font-semibold text-gray-800">
-          {title}
-        </h2>
-        <p className="text-sm text-gray-500">
-          Daily habit
-        </p>
-      </div>
+    <div className="p-4 border rounded flex justify-between items-center">
+      <span className={habit.completed ? "line-through text-gray-400" : ""}>
+        {habit.title}
+      </span>
 
-      <button className="w-10 h-10 rounded-full border border-blue-500 text-blue-500 font-bold">
+      <button
+        onClick={() => dispatch(toggleHabit(habit.id))}
+        className="px-3 py-1 bg-blue-500 text-white rounded"
+      >
         ✓
       </button>
-
     </div>
   );
 };
