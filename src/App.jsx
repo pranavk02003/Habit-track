@@ -2,8 +2,8 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/Root";
 import Home from "./pages/Home";
-import Stats from "./Pages/Stats";
-import Profile from "./Pages/Profile";
+import Stats from "./pages/Stats";
+import Profile from "./pages/Profile";
 import LoginForm from "./components/LoginForm";
 
 
