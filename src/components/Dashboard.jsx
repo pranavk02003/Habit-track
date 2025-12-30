@@ -3,7 +3,7 @@ import ProgressRing from "./ProgressRing";
 
 const Dashboard = () => {
   return (
-    <div className="bg-white rounded-xl shadow p-4 mb-6 flex items-center gap-4">
+    <div className=" bg-white rounded-xl shadow p-4 mb-6 flex items-center gap-4">
       
       <ProgressRing progress={65} />
 

@@ -10,10 +10,10 @@ const ProgressRing = () => {
   const percentage = total === 0 ? 0 : Math.round((completed / total) * 100);
 
   return (
-    <div className="bg-white p-6 rounded-xl shadow text-center">
+    <div className="  p-6 rounded-xl shadow text-center">
       <h2 className="text-lg font-semibold mb-2">Today’s Progress</h2>
 
-      <div className="relative w-24 h-24 mx-auto">
+      <div className="  relative w-24 h-24 mx-auto transition-transform duration-500 hover:scale-110">
         <svg className="w-full h-full rotate-[-90deg]">
           <circle
             cx="48"
@@ -27,7 +27,7 @@ const ProgressRing = () => {
             cx="48"
             cy="48"
             r="40"
-            stroke="#2563eb"
+            stroke="#f97316"
             strokeWidth="8"
             fill="none"
             strokeDasharray={`${percentage * 2.51} 251`}

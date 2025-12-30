@@ -1,22 +1,57 @@
+Habit Tracker – React Mini Project
+A responsive Habit Tracker web application built using React.js, Redux Toolkit, and Tailwind CSS.
+This project helps users track daily habits, visualize progress, and build consistency.
 
+📌 Project Overview
+The Habit Tracker allows users to:
+Add daily habits
+Mark habits as completed
+View daily progress with a dashboard
+Track completion percentage visually
+Experience a clean, mobile-friendly UI
+This project was developed as a frontend mini project focusing on React fundamentals, state management, and UI/UX.
 
+🚀 Features
+✅ Core Features
+Add new habits using a modal
+Toggle habit completion
+Delete habits
+Persistent state using Redux
+Responsive layout (Mobile, Tablet, Desktop)
 
+📊 Dashboard
+Shows Today’s Progress
+Displays:
+Total habits
+Completed habits
+Completion percentage
+Circular progress indicator
+Current date display (daily context)
 
+🔔 Login Reminder (Mock)
+Login reminder modal on page load
+Mock navigation to profile section
+No real authentication (frontend only)
 
+🛠️ Tech Stack
+React.js – UI library
+Redux Toolkit – State management
+React Router DOM – Routing
+Tailwind CSS – Styling
+Vite – Build tool
 
-# React + Vite
+🎨 UI & Responsiveness
+Mobile-first design
+Fully responsive across:
+📱 Mobile
+💻 Desktop
+📊 Tablet
+Clean, minimal UI inspired by modern habit-tracking apps
+Tailwind utility classes only (no custom config)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🧪 State Management
+Redux Toolkit used for:
+Adding habits
+Toggling completion
+Deleting habits
+Centralized store for predictable state updates
