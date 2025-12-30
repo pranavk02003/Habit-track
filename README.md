@@ -69,5 +69,5 @@ Animations & transitions
 Data persistence (LocalStorage / Backend)
 AI integration (API)
 
-👨‍💻 Developer
+ Developer
 Pranav K
