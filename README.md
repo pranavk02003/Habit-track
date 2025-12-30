@@ -1,4 +1,11 @@
-Habit Tracker – React Mini Project
+live demo url - https://habit-track-6kaf.vercel.app/
+
+
+
+
+
+Habit Tracker 
+– React Mini Project
 A responsive Habit Tracker web application built using React.js, Redux Toolkit, and Tailwind CSS.
 This project helps users track daily habits, visualize progress, and build consistency.
 
