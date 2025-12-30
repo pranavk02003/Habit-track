@@ -55,3 +55,19 @@ Adding habits
 Toggling completion
 Deleting habits
 Centralized store for predictable state updates
+
+📌 Limitations
+No backend integration
+Login is mock (UI only)
+Data resets on refresh
+🔮 Future Enhancements
+
+Real authentication (Firebase / JWT)
+Habit history & streak tracking
+Profile & settings page
+Animations & transitions
+Data persistence (LocalStorage / Backend)
+AI integration (API)
+
+👨‍💻 Developer
+Pranav K
